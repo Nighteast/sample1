@@ -45,8 +45,7 @@ public class TodoController {
 
     @GetMapping("files")
     public void listFiles(
-            @RequestParam("id") Integer todoId,
-            Model model) {
+            @RequestParam("id") Integer todoId, Model model) {
         List<String> filePathList = service.listFiles(todoId);
         model.addAttribute("filePathList", filePathList);
 
